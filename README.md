@@ -10,6 +10,7 @@ User should be able to:
 
 -   [x] Customize the meme's text
 -   [x] Generate a random image for the meme
+-   [x] Choose meme image from a dropdown menu
 -   [ ] Download the image with a button
 
 ### Demo
@@ -18,13 +19,13 @@ User should be able to:
 
 ## Screenshot
 
-![App Screenshot](https://i.imgur.com/TOV3hr9.jpg)
+![App Screenshot](https://i.imgur.com/JTk24aD.jpg)
 
 ## My process
 
 ### Built with
 
--   React
+-   Svelte
 -   HTML markup
 -   CSS
 -   Javascript
@@ -87,3 +88,4 @@ npm run dev
 
 -   [Scrimba](https://scrimba.com) - For the guidance and incredible courses
 -   [imgflip](https://imgflip.com/) - For their awesome meme API
+-   [Cl0udi](https://github.com/Cl0udi) - Dropdown menu idea

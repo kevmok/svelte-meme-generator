@@ -3,7 +3,8 @@
     let meme = {
         topText: '',
         bottomText: '',
-        randomImage: 'http://i.imgflip.com/1bij.jpg',
+        url: 'https://i.imgflip.com/1bij.jpg',
+        name: 'One Does Not Simply',
     };
 
     let allMemes = [];
@@ -19,7 +20,7 @@
         const url = allMemes[randomNumber].url;
         meme = {
             ...meme,
-            randomImage: url,
+            url: url,
         };
     };
 
@@ -34,10 +35,17 @@
             placeholder="Bottom Text"
             bind:value={meme.bottomText}
         />
-        <button on:click={getMemeImage}>Get a new meme image 🖼</button>
+        <select bind:value={meme.url}>
+            {#each allMemes as memes}
+                <option value={memes.url}>
+                    {memes.name}
+                </option>
+            {/each}
+        </select>
+        <button on:click={getMemeImage}>Get a random meme image 🖼</button>
     </div>
     <div class="meme">
-        <img src={meme.randomImage} value="test" alt="meme" />
+        <img src={meme.url} value="test" alt="meme" />
         <h2 class="top">{meme.topText}</h2>
         <h2 class="bottom">{meme.bottomText}</h2>
     </div>
@@ -57,11 +65,16 @@
         margin-bottom: 17px;
     }
 
-    input {
+    input,
+    select {
         font-family: 'Karla', sans-serif;
         border-radius: 5px;
         border: 1px solid #d5d4d8;
         text-indent: 5px;
+    }
+
+    select {
+        grid-column: 1/-1;
     }
 
     button {

@@ -18,7 +18,7 @@ User should be able to:
 
 ## Screenshot
 
-![App Screenshot](https://i.imgur.com/akxGPyX.jpg)
+![App Screenshot](https://i.imgur.com/TOV3hr9.jpg)
 
 ## My process
 
